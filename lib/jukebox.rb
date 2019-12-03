@@ -20,7 +20,7 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   input = gets.strip
-  song = songs.find{|x| x == input} || songs[input.to_i]
+  song = songs.find{|x| x == input} || songs[input.to_i - 1]
   if(song)
     puts "Playing " + song
   else
